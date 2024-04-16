@@ -1,0 +1,38 @@
+.OrderHistory {
+    margin: 20px;
+  }
+  
+  .OrderItem {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .OrderDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .OrderItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .OrderItems li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .OrderItems li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .OrderTotal {
+    font-weight: bold;
+  }
+  

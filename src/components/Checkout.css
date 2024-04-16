@@ -1,0 +1,60 @@
+.Checkout {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Checkout h2 {
+  margin-bottom: 1rem;
+}
+
+.Checkout form {
+  width: 80%;
+}
+
+.Checkout label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.Checkout input[type="text"],
+.Checkout input[type="email"],
+.Checkout input[type="checkbox"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Checkout .ContinueButton {
+  background-color: #000; 
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .CheckoutContainer {
+    height: auto;
+    margin-top: 1rem;
+  }
+  
+  .Checkout {
+    margin-top: 0;
+  }
+
+  .Checkout form {
+    width: 100%;
+  }
+}

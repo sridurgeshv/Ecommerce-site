@@ -1,0 +1,24 @@
+.bg-color {
+    background-color: #232f3e;
+    padding: 15px 25px;
+    margin-left: calc(-50vw + 50%); /* Adjust the left margin */
+    margin-right: calc(-50vw + 50%); /* Adjust the right margin */
+    left: 0; /* Align the header to the left edge of the screen */
+}
+  
+  .nav-link {
+    color: white;
+    padding: 10px 75px 12px 55px;
+    text-decoration: none;
+    font-family: "Times New Roman", Verdana, Serif;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  .nav-link:hover {
+    background-color: transparent; /* Set background to transparent */
+    border: 1px solid white; /* Add a white border */
+    color: white; /* Change text color to black */
+    border-radius: 5px; /* Apply border-radius */
+  }
+  
