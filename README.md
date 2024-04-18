@@ -1,4 +1,4 @@
-# E-Commerce Website
+# Strategically Architectured E-Commerce Platform: A Multi-tiered Application Approach
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
