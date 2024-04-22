@@ -50,5 +50,20 @@ To run this project locally, follow these steps:
 ## Contributing
 Contributions are welcome! Feel free to open issues and pull requests.
 
+
+## FAQ
+**1. Why React.JS?**
+
+ANS: – React JS allows you to create a web application that can change the data without reloading the whole web page. React JS uses JSX that allows HTML quoting and uses that HTML tag syntax to render subcomponents.
+
+**2. Why AWS Cognito service?**
+
+ANS: – AWS Cognito service lets you quickly add user sign-up and authentication to your web and mobile application. AWS Cognito also enables you to authenticate users through external identity providers like Google, Microsoft, Facebook, etc. It also provides temporary security credentials to access your app’s backend resources using Amazon API Gateway.
+
+
+link - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
+
+
+
 ## License
 This project is licensed under the MIT License.   
