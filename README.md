@@ -76,11 +76,21 @@ ANS: – Yes, we can verify the user using an email link instead of OTP. For thi
 
 ANS: – Yes, we can display the user information on the page. Once the user is logged in, we will get the user information as a JSON object from the AWS Cognito User Pool. by parsing the JSON object, we can display the user information on the page.
 
+**7. Can we display the logged-in user’s username or email?**
+
+ANS: – Yes, we can display the user information on the page. Once the user is logged in, we will get the user information as a JSON object from the AWS Cognito User Pool. by parsing the JSON object, we can display the user information on the page.
+
+**8. Can we redirect the user to login page after logout?**
+
+ANS: – Yes, we can redirect the user to the login page once the user is logged out from the application. We can use navigate or normal javascript method (window.location.href) 
+
 link part1 :  - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
 
 link part 2 : https://www.cloudthat.com/resources/blog/detailed-guide-to-register-a-user-in-aws-cognito-with-reactjs-part-2
 
 link part 3 : https://www.cloudthat.com/resources/blog/verify-the-user-and-login-using-aws-cognito-with-react-js-part-3 
+
+link-part 4 : https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js-session-and-logout-part-4
 
 ## License
 This project is licensed under the MIT License.   
