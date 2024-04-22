@@ -68,11 +68,19 @@ ANS: – We can add additional attributes with their value in attributeList whil
 
 ANS: – Yes, we can use the email addresses in the username field instead of giving a separate username. We can archive this goal via passing the email address as username attributes in the signup method of the AWS Cognito User Pool.
 
+**5. Can we verify the user using an email link instead of OTP?**
 
+ANS: – Yes, we can verify the user using an email link instead of OTP. For this, we need to configure the Cognito user pool. General Settings => Message Customization => Verification Type Change verification type Code to Link.
+
+**6. Can we display user information on the page?**
+
+ANS: – Yes, we can display the user information on the page. Once the user is logged in, we will get the user information as a JSON object from the AWS Cognito User Pool. by parsing the JSON object, we can display the user information on the page.
 
 link part1 :  - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
 
 link part 2 : https://www.cloudthat.com/resources/blog/detailed-guide-to-register-a-user-in-aws-cognito-with-reactjs-part-2
+
+link part 3 : https://www.cloudthat.com/resources/blog/verify-the-user-and-login-using-aws-cognito-with-react-js-part-3 
 
 ## License
 This project is licensed under the MIT License.   
