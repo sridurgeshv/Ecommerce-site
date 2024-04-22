@@ -60,6 +60,15 @@ ANS: – React JS allows you to create a web application that can change the dat
 
 ANS: – AWS Cognito service lets you quickly add user sign-up and authentication to your web and mobile application. AWS Cognito also enables you to authenticate users through external identity providers like Google, Microsoft, Facebook, etc. It also provides temporary security credentials to access your app’s backend resources using Amazon API Gateway.
 
+**3. How can we add additional attributes along with a Username and password?**
+
+ANS: – We can add additional attributes with their value in attributeList while calling the signup method of the AWS Cognito User Pool.
+
+**4. Can we pass the email address in the username field?**
+
+ANS: – Yes, we can use the email addresses in the username field instead of giving a separate username. We can archive this goal via passing the email address as username attributes in the signup method of the AWS Cognito User Pool.
+
+
 
 link - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
 
