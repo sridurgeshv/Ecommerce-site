@@ -70,9 +70,9 @@ ANS: – Yes, we can use the email addresses in the username field instead of gi
 
 
 
-link - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
+link part1 :  - https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup
 
-
+link part 2 : https://www.cloudthat.com/resources/blog/detailed-guide-to-register-a-user-in-aws-cognito-with-reactjs-part-2
 
 ## License
 This project is licensed under the MIT License.   
