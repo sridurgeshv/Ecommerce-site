@@ -1,3 +1,8 @@
+
+## 1. Cloud-Based E-Commerce Platform
+
+Develop an e-commerce platform that uses cloud NoSQL databases, serverless functions etc to provide an ecommerce platform for people to list, sell and buy products.
+
 # Strategically Architectured E-Commerce Platform: A Multi-tiered Application Approach
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -94,3 +99,4 @@ link-part 4 : https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js
 
 ## License
 This project is licensed under the MIT License.   
+
