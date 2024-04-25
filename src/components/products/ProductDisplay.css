@@ -1,0 +1,78 @@
+.ProductDisplay {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 25px;
+}
+
+.ProductItem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px; /* Adjust as needed */
+  margin-left: 100px;
+}
+
+.ProductItem img {
+  max-width: 100%;
+  height: 250px;
+}
+
+.ProductItem h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ProductItem h2:hover {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.ProductItem p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ProductItem button {
+  margin: 0;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 50%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .ProductDisplay {
+    padding: 10px;
+  }
+
+  .ProductItem {
+    max-width: calc(50% - 20px);
+  }
+}
+
+.Electronics,
+.Jewelery,
+.Men,
+.Women {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */ 
+  gap: 20px;
+  padding: 20px;
+}
+
+.Jewelery,
+.Men {
+  min-height: calc(100vh - 100px); /* Set minimum height to fill viewport - header and footer height */
+}
