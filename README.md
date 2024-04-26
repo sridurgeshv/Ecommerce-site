@@ -98,7 +98,3 @@ link-part 4 : https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js
 
 ## License
 This project is licensed under the MIT License.   
-
-# API's 
-## Products -- https://5qea0sfnn1.execute-api.us-east-1.amazonaws.com/beta/products
-## 
