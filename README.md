@@ -1,4 +1,4 @@
-## 1. Cloud-Based E-Commerce Platform
+## Cloud-Based E-Commerce Platform
 
 Develop an e-commerce platform that uses cloud NoSQL databases, serverless functions etc to provide an ecommerce platform for people to list, sell and buy products.
 
