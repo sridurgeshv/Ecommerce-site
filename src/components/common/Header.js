@@ -11,8 +11,7 @@ const Header = () => {
   const { t } = useTranslation();
   const { profile, setProfile } = useContext(UserContext);
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  const [setSearchResults] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,12 +33,8 @@ const Header = () => {
   };
 
   const handleSearch = (query) => {
-    setSearchQuery(query);
-    // Filter products based on search query
-    const filteredProducts = searchResults.filter((product) =>
-      product.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setSearchResults(filteredProducts);
+    // Navigate to the SearchResultsPage with the search query as a parameter
+    navigate(`/search-results?q=${query}`);
   };
 
   const logout = () => {
