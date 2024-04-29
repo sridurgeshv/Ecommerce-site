@@ -27,7 +27,7 @@ const Ls = () => {
       <div className="item">
       <div className="item-content">
           <h2>Email</h2>
-          <p className="email">{profile ? profile.email : ''}</p>
+          <p className="email">{profile && profile.email ? profile.email : ''}</p>
         </div>
         <Button variant="outline">Edit</Button>
       </div>
