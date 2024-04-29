@@ -40,7 +40,7 @@ export default function AccountPage() {
     </div>
     <div class="item">
       <PrivacyIcon class="icon" />
-      <Link to="/data" class="link">
+      <Link to="/privacy" class="link">
         <h2 class="subtitle">{t('common.Data and Privacy')}</h2>
       </Link>
       <p class="description">Request Your Information</p>

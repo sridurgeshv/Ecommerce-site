@@ -18,6 +18,7 @@ import Women from './components/products/Women';
 import GiftIdeas from "./components/products/GiftIdeas";
 import OrderHistory from './components/views/OrderHistory';
 import ContactPage from "./components/views/ContactPage";// Import OrderHistory component
+import Privacy from "./components/views/privacy";
 import Register from './components/auth/Register'; // Import the Register component
 import Login from './components/auth/login'; // Import the Register component
 import Ls from './components/auth/ls'; // Import the ls component with correct casing
@@ -85,6 +86,7 @@ function App() {
           <Route path="/order-history" element={<OrderHistory />} /> {/* Removed unnecessary prop */}
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/address" element={<Address />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/ls" element={<Ls />} /> {/* Use uppercase Ls instead of l&s */}
         </Routes>
         <Footer />

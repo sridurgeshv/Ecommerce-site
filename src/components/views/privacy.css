@@ -1,0 +1,35 @@
+/* privacy.css */
+
+.privacy-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .privacy-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .privacy-page h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-page p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style links */
+  .privacy-page a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .privacy-page a:hover {
+    text-decoration: underline;
+  }
+  
