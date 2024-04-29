@@ -3,7 +3,7 @@ import './privacy.css'
 
 const PrivacyPage = () => {
   return (
-    <div>
+    <div class="privacy-page">
       <h1>Privacy and Security</h1>
       <p>
         At OurCompany, we take your privacy and security seriously. We are committed to protecting
