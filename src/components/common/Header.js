@@ -4,14 +4,14 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import './Header.css';
 import UserContext from '../../contexts/UserContext';
-import ProductService from '../services/ProductService'; // Import ProductService for making API calls
-import SearchBar from '../views/SearchBar'; 
+import ProductService from '../services/ProductService';
+import SearchBar from '../views/SearchBar';
 
 const Header = () => {
   const { t } = useTranslation();
   const { profile, setProfile } = useContext(UserContext);
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
-  const [setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,8 +33,13 @@ const Header = () => {
   };
 
   const handleSearch = (query) => {
-    // Navigate to the SearchResultsPage with the search query as a parameter
-    navigate(`/search-results?q=${query}`);
+    // Filter products based on search query
+    const filteredProducts = searchResults.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    );
+
+    // Navigate to the SearchResultsPage with the filtered products
+    navigate(`/search-results?q=${query}`, { state: { searchResults: filteredProducts } });
   };
 
   const logout = () => {

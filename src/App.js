@@ -23,7 +23,6 @@ import Register from './components/auth/Register'; // Import the Register compon
 import Login from './components/auth/login'; // Import the Register component
 import Ls from './components/auth/ls'; // Import the ls component with correct casing
 import Address from './components/views/Address';
-import SearchResults from './components/services/SearchResults';
 import SearchResultsPage from './components/services/SearchResultsPage';
 import './App.css';
 
@@ -89,7 +88,6 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/address" element={<Address />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/SearchResults" element={<SearchResults />} />
           <Route path="/ls" element={<Ls />} />
           <Route path="/search-results" element={<SearchResultsPage />} />
         </Routes>
