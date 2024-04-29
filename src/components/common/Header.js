@@ -1,22 +1,45 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import './Header.css';
 import UserContext from '../../contexts/UserContext';
+import ProductService from '../services/ProductService'; // Import ProductService for making API calls
 import SearchBar from '../views/SearchBar'; 
 
 const Header = () => {
   const { t } = useTranslation();
   const { profile, setProfile } = useContext(UserContext);
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Fetch all products from the backend
+    ProductService.getAllProducts()
+      .then((data) => {
+        setSearchResults(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error);
+      });
+  }, []);
 
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
     setLanguage(selectedLanguage);
     localStorage.setItem('language', selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
+  };
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    // Filter products based on search query
+    const filteredProducts = searchResults.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setSearchResults(filteredProducts);
   };
 
   const logout = () => {
@@ -30,7 +53,7 @@ const Header = () => {
       <Link to="/">
         <h1>{t('common.SunnyMart')}</h1>
       </Link>
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} />
       <nav>
         <select value={language} onChange={handleLanguageChange}>
           <option value="en">EN</option>
