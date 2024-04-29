@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import './Header.css';
 import UserContext from '../../contexts/UserContext';
+import SearchBar from '../views/SearchBar'; 
 
 const Header = () => {
   const { t } = useTranslation();
@@ -29,6 +30,7 @@ const Header = () => {
       <Link to="/">
         <h1>{t('common.SunnyMart')}</h1>
       </Link>
+      <SearchBar />
       <nav>
         <select value={language} onChange={handleLanguageChange}>
           <option value="en">EN</option>
