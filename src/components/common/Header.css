@@ -1,0 +1,152 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 45px;
+    max-width: auto;
+    background-color: #131921;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .Header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .Header a {
+    text-decoration: none;
+  }
+
+  .Header nav {
+    display: flex;
+    align-items: center;
+  }
+  .Header div span {
+    margin-right: 10px;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .Header .CartIcon {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Header .CartIcon img {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+  }
+  .Header .CartIcon img:hover {
+    /* Removed background color */
+    border: 2px solid #fff; /* Added white border */
+    margin: -1px; /* Added negative margins */
+  }
+  
+  .Header button {
+    padding: 6px 12px; 
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 4px; 
+  }
+
+  .UserName {
+    color: white; /* Set text color to white */
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+   .logout {
+    background-color: white;
+    color:#004879;
+    padding: 14px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 35%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout:hover {
+    color:white;
+    background-color: #004879;
+  }
+
+  .loginb {
+    background-color: white;
+    color:#004879;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginb:hover {
+    color:white;
+    background-color: #004879;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .Header {
+    flex-direction: column; 
+    align-items: flex-start;
+    }
+
+  .Header h1,
+  .Header div,
+  .Header .CartIcon {
+    width: 100%; 
+    justify-content: space-between; 
+    padding: 10px 0; 
+  }
+
+  .Header div {
+    order: 2; 
+  }
+  
+  .Header .CartIcon {
+    order: 3;
+  }
+  
+    .Header div span {
+      font-size: 16px;
+    }
+  }
+  
+  /* Style the select element */
+  select {
+    padding: 8px 10px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Add border for clarity */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: #f5f5f5; /* Set background color */
+    color: #333; /* Set text color */
+    appearance: none; /* Remove default dropdown arrow */
+    margin-right:15px;
+  }
+
+  /* Style the options */
+  select option {
+    padding: 8px 12px; /* Adjust padding as needed */
+  }
+
+  /* Style the options on hover */
+  select option:hover {
+    background-color: #ddd; /* Change background color on hover */
+  }
+
+  /* Style the options when selected */
+  select option:checked {
+    background-color: #007bff; /* Change background color when selected */
+    color: #fff; /* Change text color when selected */
+  }
