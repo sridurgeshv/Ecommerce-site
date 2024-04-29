@@ -37,10 +37,10 @@ const Header = () => {
     const filteredProducts = searchResults.filter((product) =>
       product.title.toLowerCase().includes(query.toLowerCase())
     );
-
-    // Navigate to the SearchResultsPage with the filtered products
-    navigate(`/search-results?q=${query}`, { state: { searchResults: filteredProducts } });
-  };
+  
+    // Navigate to the SearchResultsPage with the filtered products as state
+    navigate('/search-results', { state: { searchResults: filteredProducts } });
+  }; 
 
   const logout = () => {
     setProfile(null);

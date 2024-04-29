@@ -5,36 +5,31 @@ import './sr.css';
 const SearchResults = ({ results, addToCart }) => {
   const { profile } = useContext(UserContext);
 
-  const handleAddToCart = (product) => {
+  // Get the first product from the search results (assuming the search is accurate)
+  const product = results[0]; // Access the first element
+
+  const handleAddToCart = () => {
     if (profile) {
       addToCart(product);
     } else {
-      // Redirect user to login page
       window.location.href = '/login';
     }
-  };
-
-  const truncateTitle = (title, maxLines = 2) => {
-    const words = title.split(' ');
-    if (words.length <= maxLines) return title;
-
-    return `${words.slice(0, maxLines).join(' ')}...`;
   };
 
   return (
     <div className="search-results">
       <h2>Search Results</h2>
       <div className="ProductDisplay">
-        {results.map((product) => (
+        {product && ( // Only render if a product exists
           <div key={product.id} className="ProductItem">
-            <h2 title={product.title}>{truncateTitle(product.title)}</h2>
+            <h2 title={product.title}>{product.title}</h2>
             <img src={product.image} alt={product.title} />
             <div className="productInfo">
               <p>${product.price}</p>
-              <button onClick={() => handleAddToCart(product)}>+ Cart</button>
+              <button onClick={handleAddToCart}>+ Cart</button>
             </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
