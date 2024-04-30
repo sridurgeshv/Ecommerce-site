@@ -1,0 +1,68 @@
+.SearchedProductDisplay {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 5px;
+  padding: 5px;
+  max-width: 90rem;
+  min-height: calc(100vh - 100px);
+}
+
+.searchItem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  margin-top: 25px;
+  margin-left: 150px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.searchItem img {
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 10px; /* Add some spacing below the image */
+  }
+  
+  .searchItem h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .searchItem h2:hover {
+    overflow: visible;
+    text-overflow: clip;
+  }
+  
+  .searchItem p {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .searchItem button {
+    margin: 0;
+    background-color: #3187A2;
+    color: #DEEFF5;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 35%;
+    border-radius: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .SearchedProductDisplay {
+      padding: 10px;
+    }
+  
+    .searchItem {
+      max-width: calc(50% - 20px);
+    }
+  }

@@ -1,5 +1,3 @@
-
-
 const API_URL = 'https://fakestoreapi.com'; // Base URL of the API
 
 const ProductService = {
