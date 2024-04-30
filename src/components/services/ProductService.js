@@ -15,6 +15,19 @@ const ProductService = {
         return [];
       });
   },
+    searchProducts: (query) => {
+    return fetch(`${API_URL}/products/search?q=${query}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        console.error('Error searching products:', error);
+        return [];
+      });
+  },
 };
 
 export default ProductService;

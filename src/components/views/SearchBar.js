@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './sbar.css';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     // Redirect to search results page with the search query
     if (searchQuery.trim() !== '') {
-      return (
-        <Link to={`/search-results?q=${encodeURIComponent(searchQuery)}`} />
-      );
+      navigate(`/search-results?q=${encodeURIComponent(searchQuery)}`);
     }
   };
 

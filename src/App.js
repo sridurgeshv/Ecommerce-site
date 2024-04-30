@@ -89,7 +89,7 @@ function App() {
           <Route path="/address" element={<Address />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/ls" element={<Ls />} />
-          <Route path="/search-results" component={SearchResultsPage} />
+          <Route path="/search-results" element={<SearchResultsPage addToCart={addToCart} />} />
         </Routes>
         <Footer />
       </div>
