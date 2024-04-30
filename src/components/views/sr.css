@@ -1,8 +1,9 @@
 .SearchedProductDisplay {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
-  gap: 5px;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 20px; /* Adjust the gap as needed */
+  padding: 20px;
   max-width: 90rem;
   min-height: calc(100vh - 100px);
 }
