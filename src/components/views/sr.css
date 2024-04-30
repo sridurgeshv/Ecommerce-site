@@ -56,6 +56,13 @@
     border-radius: 15px;
   }
   
+  .searchItem .productInfo {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 5px; 
+  }
+
   /* Responsive styles */
   @media (max-width: 768px) {
     .SearchedProductDisplay {

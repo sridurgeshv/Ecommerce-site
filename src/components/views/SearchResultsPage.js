@@ -18,6 +18,13 @@ const SearchResultsPage = ({ addToCart }) => {
     }
   }, [searchQuery]);
  
+  const truncateTitle = (title, maxLines = 2) => {
+    const words = title.split(' ');
+    if (words.length <= maxLines) return title;
+
+    return `${words.slice(0, maxLines).join(' ')}...`;
+  };
+
   const handleAddToCart = (product) => {
     if (profile) {
       addToCart(product);
@@ -29,10 +36,10 @@ const SearchResultsPage = ({ addToCart }) => {
 
   return (
     <div className="SearchedProductDisplay">
-      <h1>Search Results for "{searchQuery}"</h1>
+      <h1>Search Results for "{searchQuery}"</h1> <br></br>
       {searchResults.map((product) => (
         <div key={product.id} className="searchItem">
-          <h2>{product.title}</h2>
+          <h2 title={product.title}>{truncateTitle(product.title)}</h2>
           <img src={product.image} alt={product.title} />          
           <div className="productInfo">
           <p>${product.price}</p>
