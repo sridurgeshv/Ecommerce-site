@@ -15,18 +15,18 @@ const ProductService = {
         return [];
       });
   },
-    searchProducts: (query) => {
-    return fetch(`${API_URL}/products/search?q=${query}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .catch((error) => {
-        console.error('Error searching products:', error);
-        return [];
-      });
+    // Function to search for products
+  searchProducts: async (query) => {
+    try {
+      const products = await ProductService.getAllProducts();
+      const searchResults = products.filter((product) =>
+        product.title.toLowerCase().includes(query.toLowerCase())
+      );
+      return searchResults;
+    } catch (error) {
+      console.error('Error searching products:', error);
+      return [];
+    }
   },
 };
 
