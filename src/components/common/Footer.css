@@ -12,6 +12,13 @@
   font-size: 1.24rem;
 }
 
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+
+
 /* Media Queries for Responsiveness (optional) */
 @media (max-width: 768px) {
   .footer {
