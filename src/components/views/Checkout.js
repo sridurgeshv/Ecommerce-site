@@ -4,14 +4,12 @@ import './Checkout.css';
 
 const Checkout = ({ clearCart }) => {
   const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '', 
+    name: '',
+    family_name: '', 
     email: '',
-    phone: '', 
+    phone_number: '', 
     address: '', 
-    postalCode: '',
-    city: '', 
-    country: ''
+    locale: ''
   });
 
   const handleChange = (e) => {
@@ -38,21 +36,21 @@ const Checkout = ({ clearCart }) => {
       <div className="Checkout">
         <h2>Checkout</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="name">First Name</label>
           <input 
             type="text" 
-            name="firstName" 
-            id="firstName"
-            value={userData.firstName} 
+            name="name" 
+            id="name"
+            value={userData.name} 
             onChange={handleChange}
           />
 
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="family_name">Last Name</label>
           <input 
             type="text" 
-            name="lastName" 
-            id="lastName"
-            value={userData.lastName} 
+            name="family_name" 
+            id="family_name"
+            value={userData.family_name} 
             onChange={handleChange} 
             required 
           />
@@ -67,12 +65,12 @@ const Checkout = ({ clearCart }) => {
             required 
           />
 
-          <label htmlFor="phone">Phone Number</label>
+          <label htmlFor="phone_number">Phone Number</label>
           <input 
             type="text" 
-            name="phone" 
-            id="phone"
-            value={userData.phone} 
+            name="phone_number" 
+            id="phone_number"
+            value={userData.phone_number} 
             onChange={handleChange} 
             required 
           />
@@ -87,32 +85,12 @@ const Checkout = ({ clearCart }) => {
             required 
           />
 
-          <label htmlFor="postalCode">Postal Code</label>
+          <label htmlFor="locale">Locale (Postal Code & Country)</label>
           <input 
             type="text" 
-            name="postalCode" 
-            id="postalCode"
-            value={userData.postalCode} 
-            onChange={handleChange} 
-            required 
-          />
-
-          <label htmlFor="city">City</label>
-          <input 
-            type="text" 
-            name="city" 
-            id="city"
-            value={userData.city} 
-            onChange={handleChange} 
-            required 
-          />
-
-          <label htmlFor="country">Country</label>
-          <input 
-            type="text" 
-            name="country" 
-            id="country"
-            value={userData.country} 
+            name="locale" 
+            id="locale"
+            value={userData.locale} 
             onChange={handleChange} 
             required 
           />
