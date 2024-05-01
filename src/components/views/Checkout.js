@@ -85,7 +85,7 @@ const Checkout = ({ clearCart }) => {
             required 
           />
 
-          <label htmlFor="locale">Locale (Postal Code & Country)</label>
+          <label htmlFor="locale">Country</label>
           <input 
             type="text" 
             name="locale" 
