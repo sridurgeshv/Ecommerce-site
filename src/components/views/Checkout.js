@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ConfirmationModal from './ConfirmationModal';
 import './Checkout.css';
+import UserPool from '../../UserPool'; // Import the UserPool instance
+import UserContext from '../../contexts/UserContext';
 
 const Checkout = ({ clearCart }) => {
   const [userData, setUserData] = useState({
@@ -12,17 +14,57 @@ const Checkout = ({ clearCart }) => {
     locale: ''
   });
 
+  const { profile } = useContext(UserContext);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Do something with userData (e.g., submit order)
-    clearCart();
-    setShowConfirmationModal(true);
-  };
+
+    // Update user attributes in Cognito
+    const user = UserPool.getCurrentUser();
+    const attributeList = [];
+
+     // Add attributes to the attribute list
+    for (let attribute in userData) {
+      attributeList.push({
+        Name: attribute,
+        Value: userData[attribute]
+      });
+    }
+
+    try {
+      await new Promise((resolve, reject) => {
+        user.getSession((err, session) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve(session);
+        });
+      });
+  
+      await new Promise((resolve, reject) => {
+        user.updateAttributes(attributeList, (err, result) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve(result);
+        });
+      });
+
+      // Clear cart and show confirmation modal
+      clearCart();
+      setShowConfirmationModal(true);
+    } catch (error) {
+      console.error('Error updating attributes:', error);
+      // Handle error here
+    }
+  };  
 
   const closeConfirmationModal = () => {
     setShowConfirmationModal(false);
@@ -95,8 +137,8 @@ const Checkout = ({ clearCart }) => {
             required 
           />
 
-          <button type="submit" className="ContinueButton">Submit Order</button>
-        </form>
+            <button type="submit" className="ContinueButton">Submit Order</button>
+        </form> 
       </div>
       {showConfirmationModal && (
         <ConfirmationModal closeModal={closeConfirmationModal} />
