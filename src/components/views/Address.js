@@ -62,7 +62,9 @@ const Address = () => {
   }
 
   if (!profile) {
-    // Redirect to login page if user is not logged in
+    // Display alert if user is not logged in
+    alert('You need to log in before viewing the address page.');
+    // Redirect to login page
     navigate('/login');
     return null; // Return null to prevent rendering the component
   }
