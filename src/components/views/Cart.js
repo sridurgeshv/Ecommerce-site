@@ -10,7 +10,7 @@ const Cart = ({ cartItems }) => {
   };
 
   const goToCheckout = () => {
-    navigate('/checkout');
+    navigate('/checkout', { state: { cartItems } }); // Pass cartItems as state to checkout route
   };
 
   return (
