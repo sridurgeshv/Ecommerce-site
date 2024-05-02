@@ -13,9 +13,8 @@ const Address = () => {
     address: '',
     locale: '',
   });
-  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
-  const { profile } = useContext(UserContext); // Access the profile from UserContext
+  const { profile } = useContext(UserContext);
 
   useEffect(() => {
     // Check if user is logged in upon component mount
@@ -24,13 +23,11 @@ const Address = () => {
       user.getSession((err, session) => {
         if (err) {
           console.error('Error fetching session:', err);
-          setIsLoading(false);
           return;
         }
         user.getUserAttributes((err, attributes) => {
           if (err) {
             console.error('Error fetching user attributes:', err);
-            setIsLoading(false);
             return;
           }
           const userAttributes = {};
@@ -38,11 +35,8 @@ const Address = () => {
             userAttributes[attribute.getName()] = attribute.getValue();
           });
           setFormData(userAttributes);
-          setIsLoading(false);
         });
       });
-    } else {
-      setIsLoading(false);
     }
   }, []);
 
@@ -56,10 +50,6 @@ const Address = () => {
     // Add your submission logic here
     console.log(formData);
   };
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
 
   if (!profile) {
     // Display alert if user is not logged in
