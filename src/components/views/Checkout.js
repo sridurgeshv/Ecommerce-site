@@ -1,11 +1,20 @@
 import React, { useState, useContext } from 'react';
 import ConfirmationModal from './ConfirmationModal';
 import { v4 as uuidv4 } from 'uuid'; // Import uuid library
+import AWS from 'aws-sdk';
 import './Checkout.css';
 import UserPool from '../../UserPool'; // Import the UserPool instance
 import UserContext from '../../contexts/UserContext';
 
-const Checkout = ({ clearCart }) => {
+// Initialize AWS SDK with your credentials
+AWS.config.update({
+  accessKeyId: 'AKIA2KFSGM3U6BXOBSU2',
+  secretAccessKey: 'WKcps235lqKKMtJ5OLSypE4kDsvwJkmvGOqVBRrR',
+  region: 'us-east-1',
+});
+
+const Checkout = ({ clearCart, location }) => { // Receive location prop to access cartItems from state
+  const cartItems = location?.state?.cartItems || []; // Extract cartItems from location state using optional chaining
   const [userData, setUserData] = useState({
     name: '',
     family_name: '', 
@@ -22,6 +31,8 @@ const Checkout = ({ clearCart }) => {
     setUserData({ ...userData, [name]: value });
   };
 
+  const s3 = new AWS.S3();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,10 +42,33 @@ const Checkout = ({ clearCart }) => {
     // Store the order details along with the order ID
     const orderDetails = {
       orderId,
-      items: cartItems, // Assuming you have cartItems in your state
-      userData, // User details from the form
-      timestamp: new Date().toISOString(), // Timestamp of the order
+      items: cartItems,
+      userData,
+      timestamp: new Date().toISOString(),
+      userId: profile.username,
     };
+
+     // Associate the order ID with the user ID
+     orderDetails.userId = profile.username; // Assuming profile.username contains the user ID
+
+     // Convert orderDetails to JSON
+    const orderDetailsJson = JSON.stringify(orderDetails);
+
+    // Upload order details to Amazon S3
+  const params = {
+    Bucket: 'ecommerce-webapp',
+    Key: `${orderId}.json`, // Use orderId as the file name
+    Body: orderDetailsJson,
+    ContentType: 'application/json',
+  };
+
+  try {
+    await s3.upload(params).promise();
+    console.log('Order details uploaded to Amazon S3');
+  } catch (error) {
+    console.error('Error uploading order details to Amazon S3:', error);
+    // Handle error here
+  }
 
     // Update user attributes in Cognito
     const user = UserPool.getCurrentUser();
