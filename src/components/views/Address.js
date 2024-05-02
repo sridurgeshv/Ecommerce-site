@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './address.css';
+import UserPool from '../../UserPool'; // Import the UserPool instance
 
 const Address = () => {
     const [formData, setFormData] = useState({
         name: '',
+        family_name: '',
+        email: '',
+        phone_number: '',
         address: '',
-        city: '',
-        state: '',
-        zip: '',
-        country: ''
+        locale: ''
     });
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        // Check if user is logged in upon component mount
+        const user = UserPool.getCurrentUser();
+        setIsLoggedIn(!!user); // Set isLoggedIn to true if user is logged in
+        if (user) {
+            user.getSession((err, session) => {
+                if (err) {
+                    console.error('Error fetching session:', err);
+                    return;
+                }
+                user.getUserAttributes((err, attributes) => {
+                    if (err) {
+                        console.error('Error fetching user attributes:', err);
+                        return;
+                    }
+                    const userAttributes = {};
+                    attributes.forEach((attribute) => {
+                        userAttributes[attribute.getName()] = attribute.getValue();
+                    });
+                    setFormData(userAttributes);
+                });
+            });
+        }
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,6 +48,10 @@ const Address = () => {
         // Add your submission logic here
         console.log(formData);
     };
+
+    if (!isLoggedIn) {
+        return <div>You need to be logged in to view this page.</div>;
+    }
 
     return (
         <div className="address-form">
@@ -49,91 +80,50 @@ const Address = () => {
                 ></textarea>
             </div>
 
-            <div className="form-row">
-                <div className="form-field">
-                    <label htmlFor="city">City</label>
-                    <input
-                        placeholder="Your city"
-                        id="city"
-                        name="city"
-                        type="text"
-                        value={formData.city}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                <div className="form-field">
-                    <label htmlFor="state">State</label>
-                    <input
-                        placeholder="Your state"
-                        id="state"
-                        name="state"
-                        type="text"
-                        value={formData.state}
-                        onChange={handleChange}
-                    />
-                </div>
-
+            <div className="form-field">
+                <label htmlFor="phone_number">Phone Number</label>
+                <input
+                    placeholder="Your phone number"
+                    type="text"
+                    id="phone_number"
+                    name="phone_number"
+                    value={formData.phone_number}
+                    onChange={handleChange}
+                />
             </div>
 
-            <div className="form-row">
-                <div className="form-field">
-                    <label htmlFor="zip">ZIP</label>
-                    <input
-                        placeholder="Your ZIP code"
-                        id="zip"
-                        name="zip"
-                        type="text"
-                        value={formData.zip}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                <div className="form-field">
-                    <label htmlFor="country">Country</label>
-                    <select
-                        id="country"
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                    >
-                            <option value="">Select a country</option>
-                            <optgroup label="Africa">
-                            <option value="AF">Afghanistan</option>
-                            <option value="DZ">Algeria</option>
-                            <option value="AO">Angola</option>
-                            ...
-                            <option value="ZW">Zimbabwe</option>
-                            </optgroup>
-
-                            <optgroup label="Asia">
-                            <option value="AM">Armenia</option>
-                            <option value="BH">Bahrain</option>
-                            ...
-                            <option value="IN">India</option>
-                            <option value="YE">Yemen</option>
-                            </optgroup>
-
-                             <optgroup label="South America">
-                            <option value="AR">Argentina</option>
-                           <option value="BO">Bolivia</option>
-                           <option value="BR">Brazil</option>
-                             ...
-                         <option value="VE">Venezuela</option>
-                        </optgroup>
-                             ...
-                        </select>
-                    </div>
-                </div>
+            <div className="form-field">
+                <label htmlFor="email">Email</label>
+                <input
+                    placeholder="Your email"
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                />
+            </div>
 
             <div className="form-field">
-                <button
-                    className="submit-button"
-                    type="submit"
-                    onClick={handleSubmit}
-                >
-                    Submit
-                </button>
+                <label htmlFor="locale">Country</label>
+                <input
+                    placeholder="Your country"
+                    type="text"
+                    id="locale"
+                    name="locale"
+                    value={formData.locale}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <div className="form-field">
+            <button
+                className="submit-button"
+                type="submit"
+                onClick={handleSubmit}
+            >
+                Submit
+            </button>
             </div>
         </div>
     );
