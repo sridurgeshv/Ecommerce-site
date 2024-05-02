@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import ConfirmationModal from './ConfirmationModal';
+import { v4 as uuidv4 } from 'uuid'; // Import uuid library
 import './Checkout.css';
 import UserPool from '../../UserPool'; // Import the UserPool instance
 import UserContext from '../../contexts/UserContext';
@@ -23,6 +24,17 @@ const Checkout = ({ clearCart }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Generate a unique order ID
+    const orderId = uuidv4();
+
+    // Store the order details along with the order ID
+    const orderDetails = {
+      orderId,
+      items: cartItems, // Assuming you have cartItems in your state
+      userData, // User details from the form
+      timestamp: new Date().toISOString(), // Timestamp of the order
+    };
 
     // Update user attributes in Cognito
     const user = UserPool.getCurrentUser();
