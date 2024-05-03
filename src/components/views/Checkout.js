@@ -11,7 +11,7 @@ AWS.config.update({
   accessKeyId: 'AKIA2KFSGM3U6BXOBSU2',
   secretAccessKey: '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',
   region: 'us-east-1',
-  endpoint: 'https://s3.amazonaws.com', // Add this line
+  endpoint: 'https://s3.amazonaws.com',
 });
 
 const Checkout = ({ clearCart, location }) => { // Receive location prop to access cartItems from state
