@@ -29,7 +29,7 @@ const OrderHistory = () => {
         const orders = await Promise.all(orderFiles.map(async (file) => {
           const orderKey = file.Key;
           const orderData = await s3.getObject({
-            Bucket: 'YOUR_S3_BUCKET_NAME',
+            Bucket: 'ecommerce-webapp',
             Key: orderKey,
           }).promise();
 
