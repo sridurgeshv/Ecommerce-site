@@ -5,6 +5,7 @@ import AWS from 'aws-sdk';
 import './Checkout.css';
 import UserPool from '../../UserPool'; // Import the UserPool instance
 import UserContext from '../../contexts/UserContext';
+import { useCart } from '../../contexts/CartContext';
 
 // Initialize AWS SDK with your credentials
 AWS.config.update({
@@ -14,8 +15,8 @@ AWS.config.update({
   endpoint: 'https://s3.amazonaws.com',
 });
 
-const Checkout = ({ clearCart, location }) => { // Receive location prop to access cartItems from state
-  const cartItems = location?.state?.cartItems || []; // Extract cartItems from location state using optional chaining
+const Checkout = ({ cartItems }) => {
+  const { updateCart } = useCart(); // Use useCart hook
   const [userData, setUserData] = useState({
     name: '',
     family_name: '', 
@@ -36,10 +37,10 @@ const Checkout = ({ clearCart, location }) => { // Receive location prop to acce
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     // Generate a unique order ID
     const orderId = uuidv4();
-
+  
     // Store the order details along with the order ID
     const orderDetails = {
       orderId,
@@ -56,12 +57,12 @@ const Checkout = ({ clearCart, location }) => { // Receive location prop to acce
     const orderDetailsJson = JSON.stringify(orderDetails);
 
     // Upload order details to Amazon S3
-  const params = {
-    Bucket: 'ecommerce-webapp',
-    Key: `${orderId}.json`, // Use orderId as the file name
-    Body: orderDetailsJson,
-    ContentType: 'application/json',
-  };
+    const params = {
+      Bucket: 'ecommerce-webapp',
+      Key: `${orderId}.json`, // Use orderId as the file name
+      Body: orderDetailsJson,
+      ContentType: 'application/json',
+    };
 
   try {
     await s3.upload(params).promise();
@@ -104,8 +105,8 @@ const Checkout = ({ clearCart, location }) => { // Receive location prop to acce
         });
       });
 
-      // Clear cart and show confirmation modal
-      clearCart();
+      // Clear cart using updateCart function
+      updateCart([]);  // Clear cart items after successful checkout
       setShowConfirmationModal(true);
     } catch (error) {
       console.error('Error updating attributes:', error);
