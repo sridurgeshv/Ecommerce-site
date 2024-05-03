@@ -76,7 +76,7 @@ function App() {
             } 
           />
           <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-          <Route path="/checkout" element={<Checkout clearCart={clearCart}/>} />
+          <Route path="/checkout" element={<Checkout cartItems={cartItems} clearCart={clearCart} />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/deals" element={<TodayDeals addToCart={addToCart}/>}/>
           <Route path="/electronics" element={<Electronics addToCart={addToCart} />} />
