@@ -1,0 +1,116 @@
+.ProductDisplay {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 5px;
+  padding: 5px;
+  max-width: 90rem;
+}
+
+.ProductItem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  margin-top: 25px;
+  margin-left: 150px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.ProductItem img {
+  max-width: 100%;
+  height: 250px;
+  margin-bottom: 10px; /* Add some spacing below the image */
+}
+
+.ProductItem h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ProductItem h2:hover {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.ProductItem p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ProductItem button {
+  margin: 0;
+  background-color: #3187A2;
+  color: #DEEFF5;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 35%;
+  border-radius: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .ProductDisplay {
+    padding: 10px;
+  }
+
+  .ProductItem {
+    max-width: calc(50% - 20px);
+  }
+}
+
+.Electronics,
+.Jewelery,
+.Men,
+.Women {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */ 
+  gap: 20px;
+  padding: 5px;
+}
+
+.Jewelery,
+.Men {
+  min-height: calc(100vh - 100px); /* Set minimum height to fill viewport - header and footer height */
+}
+
+.Men .ProductItem {
+  border-radius: 18px;
+}
+
+.Men .ProductItem button {
+  margin: 0;
+  background-color: #3187A2;
+  color: #DEEFF5;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 35%;
+  border-radius: 15px;
+}
+
+.Men .ProductItem button:hover {
+  background-color: #DEEFF5;
+  color: #3187A2;
+}
+
+.ProductItem .productInfo {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 5px; 
+}
+
+.Men .ProductItem p {
+  font-weight: bold;
+  margin: 0; 
+  display: inline-block;
+  margin-right: 10px;
+}

@@ -1,0 +1,60 @@
+.address-form {
+    margin-top: 1rem;
+    margin-left: 450px;
+    background-color: #333;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 50%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.address-form h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+}
+
+.form-field {
+    margin-top: 1rem;
+    margin-left: 250px;
+}
+
+.form-field label {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    width: 65%;
+    background-color: #444;
+    border-radius: 0.25rem;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.form-field textarea {
+    width: 62%;
+}
+
+.submit-button {
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
