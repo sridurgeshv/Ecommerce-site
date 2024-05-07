@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Login Container */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  min-height: calc(80vh - 100px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: 45px auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login img {
+  height: 130px;
+  width: 150px;
+}
+
+.login h3 {
+  color: #777373;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Added to center form elements */
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.signin {
+  background-color: white;
+  color: #004879;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin:hover {
+  color: white;
+  background-color: #004879;
+}
+
+.login p {
+  text-align: center;
+  color: #000;
+}
+
+.signup {
+  align-self: center; /* Added to center the button within the form */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .login {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+  }
+}
