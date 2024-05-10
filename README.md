@@ -96,5 +96,9 @@ ANS: – Yes, we can redirect the user to the login page once the user is logged
 
 [link-part 4](https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js-session-and-logout-part-4)
 
+## Architecture 
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
+
+
 ## License
 This project is licensed under the MIT License.   
