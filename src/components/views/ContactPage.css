@@ -1,0 +1,254 @@
+/* General styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  
+  /* Input and Textarea styles */
+  .input,
+  .textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #355891;
+  border-radius: 0.25rem;
+  }
+  
+  .textarea {
+  resize: vertical;
+  }
+  
+  .contact-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  /* Outline with a solid border */
+  border: 1px solid #ddd;
+  max-width: 650px; /* Change width to max-width for responsiveness */
+  margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  .contact-form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* Add margin between form fields */
+  }
+  
+  .contact-form label {
+  font-size: 0.875rem; /* Adjust label font size */
+  font-weight: bold; /* Make labels bold */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 0.875rem; /* Adjust input font size */
+  }
+  
+  .contact-form textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  .button-container {
+  text-align: center; /* Center the submit button */
+  margin-top: 1rem; /* Add margin above the button */
+  }
+  
+  
+  /* faq-container styles */
+  .faq-container {
+  background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #1e90ff; /* Border color */
+  border-radius: 0.375rem; /* Rounded corners */
+  padding: 1rem; /* Padding */
+  }
+  
+  /* faq-content styles */
+  .faq-content {
+  padding: 1.5rem; /* Padding */
+  }
+  
+  /* faq-title styles */
+  .faq-title {
+  font-size: 1.875rem; /* Large font size */
+  font-weight: bold; /* Bold font weight */
+  letter-spacing: -0.025em; /* Tight letter spacing */
+  margin-left: 450px;
+  }
+  
+  /* faq-items styles */
+  .faq-items {
+  margin-top: 1.5rem; /* Margin at the top */
+  margin-left: 450px;
+  font-size: 1.275rem; /* Large font size */
+  }
+  
+  /* faq-item styles */
+  .faq-item {
+  margin-bottom: 1rem; /* Margin at the bottom */
+  }
+  
+  /* faq-question styles */
+  .faq-question {
+  cursor: pointer; /* Cursor pointer on hover */
+  list-style: none; /* No list style */
+  outline: none; /* Remove outline */
+  font-weight: bold; /* Bold font weight */
+  }
+  
+  /* faq-answer styles */
+  .faq-answer {
+  margin-top: 0.5rem; /* Margin at the top */
+  }
+  
+  /* support-container styles */
+  .support-container {
+  border: 1px solid #1e90ff; /* Border color */
+  border-radius: 0.375rem; /* Rounded corners */
+  padding: 1rem; /* Padding */
+  }
+  
+  /* support-content styles */
+  .support-content {
+  padding: 1.5rem; /* Padding */
+  }
+  
+  /* support-title styles */
+  .support-title {
+  font-size: 1.875rem; /* Large font size */
+  font-weight: bold; /* Bold font weight */
+  letter-spacing: -0.025em; /* Tight letter spacing */
+  margin-left: 450px;
+  }
+  
+  /* support-grid styles */
+  .support-grid {
+  margin-top: 1.5rem; /* Margin at the top */
+  display: grid; /* Grid layout */
+  gap: 1rem; /* Gap between grid items */
+  margin-left: 450px;
+  }
+  
+  /* support-info styles */
+  .support-info {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column layout */
+  }
+  
+  /* support-subtitle styles */
+  .support-subtitle {
+  font-weight: bold; /* Bold font weight */
+  }
+  
+  /* support-description styles */
+  .support-description {
+  margin-top: 0.5rem; /* Margin at the top */
+  font-size: 1.275rem; /* Large font size */
+  }
+  .support-detail {
+    font-size: 1.275rem; /* Large font size */
+  }
+  /* Text styles */
+  .text-sm {
+  font-size: 0.875rem; /* Small font size */
+  }
+  
+  /* contact-container styles */
+  .contact-container {
+  background-color: #f0f0f0; /* Background color */
+  padding: 2rem; /* Padding */
+  border-radius: 0.375rem; /* Rounded corners */
+  height: 700px;
+  margin-bottom: 25px;
+  }
+  
+  /* contact-content styles */
+  .contact-content {
+  padding: 1rem; /* Padding */
+  }
+  
+  /* contact-header styles */
+  .contact-header {
+  margin-bottom: 2rem; /* Margin bottom */
+  margin-left: 450px;
+  }
+  
+  /* contact-title styles */
+  .contact-title {
+  font-size: 1.875rem; /* Large font size */
+  font-weight: bold; /* Bold font weight */
+  }
+  
+  /* contact-form styles */
+  .contact-form {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column layout */
+  margin-left: 450px;
+  height: 500px; 
+  }
+  
+  /* input-container styles */
+  .input-container {
+  margin-bottom: 1rem; /* Margin bottom */
+  }
+  
+  /* input-label styles */
+  .input-label {
+  font-size: 0.875rem; /* Small font size */
+  font-weight: bold; /* Bold font weight */
+  }
+  
+  /* input styles */
+  .input {
+  width: 100%; /* Full width */
+  padding: 0.5rem; /* Padding */
+  border: 1px solid #355891; /* Border */
+  border-radius: 0.25rem; /* Rounded corners */
+  }
+  
+  .input-container textarea {
+    width: 98%;
+}
+
+/* submit-button styles */
+.button-container .submit-button {
+  background-color: #ffffff; /* Background color */
+  color: #355891; /* Text color */
+  border: 1px solid #355891; /* Border */
+  border-radius: 0.25rem; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding */
+  cursor: pointer; /* Cursor */
+  width: 100px; /* Fixed width in pixels */
+  position: absolute;
+  left: 520px;
+}
+  
+/* submit-button hover styles */
+  .button-container .submit-button:hover {
+  background-color: #355891; /* Darker background color on hover */
+  color: #ffffff;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  z-index: 1000;
+}
+
+.notification.error {
+  background-color: red;
+  color: white;
+}
+
+.notification.success {
+  background-color: green;
+  color: white;
+}
