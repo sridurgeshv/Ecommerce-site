@@ -1,0 +1,26 @@
+/* privacy.css */
+
+.privacy-page {
+    min-height: calc(100vh - 200px);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .privacy-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .privacy-page h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-page p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+     

@@ -1,0 +1,160 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  height: auto;
+  max-width: 100%; /* Set max-width to 100% */
+  background-color: #131921;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+.Header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  padding-left: 0; /* Remove padding-left */
+}
+
+.Header a {
+  text-decoration: none;
+}
+
+.Header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent nav items from wrapping */
+}
+
+.Header div span {
+  margin-right: 10px;
+  color: #333;
+  font-size: 18px;
+}
+
+.Header .CartIcon {
+  margin-left: 20px;
+  padding-right: 0; /* Remove padding-right */
+}
+
+.Header .CartIcon img {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+}
+
+.Header .CartIcon img:hover {
+  border: 2px solid #fff;
+  margin: -1px;
+}
+
+.Header button {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.UserName {
+  color: white;
+  font-size: 16px; /* Reduce font size for smaller screens */
+  margin-right: 10px;
+}
+
+.logout,
+.loginb {
+  background-color: white;
+  color: #004879;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout:hover,
+.loginb:hover {
+  color: white;
+  background-color: #004879;
+}
+
+
+/* Style the select element */
+select {
+  padding: 6px 8px; /* Reduce padding for smaller screens */
+  font-size: 14px; /* Reduce font size for smaller screens */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  color: #333;
+  appearance: none;
+  margin-right: 15px;
+  cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+/* Style the options */
+select option {
+  padding: 6px 10px; /* Reduce padding for smaller screens */
+}
+
+/* Style the options on hover */
+select option:hover {
+  background-color: #ddd;
+}
+
+/* Style the options when selected */
+select option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.Header .SearchBar {
+  flex-grow: 1; /* Allow the search bar to take up available space */
+  margin: 0 10px; /* Add some spacing between the search bar and other elements */
+  max-width: 600px; /* Set a maximum width for the search bar */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .Header h1,
+  .Header nav,
+  .Header .CartIcon {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+
+  .Header nav {
+    order: 2;
+    flex-direction: row; /* Change nav items to row on smaller screens */
+  }
+
+  .Header .CartIcon {
+    order: 3;
+  }
+
+  .Header div span {
+    font-size: 16px;
+  }
+  /* Adjust search bar width */
+  .SearchBar {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for the search bar */
+  }
+}
+
+@media (max-width: 480px) {
+  .Header .SearchBar {
+    max-width: 200px; /* Further reduce the maximum width for even smaller screens */
+  }
+}
