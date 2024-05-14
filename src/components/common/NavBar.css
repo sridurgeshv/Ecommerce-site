@@ -1,0 +1,45 @@
+.bg-color {
+  background-color: #232f3e;
+  padding: 10px 15px; /* Adjust padding */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: "Times New Roman", Verdana, Serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: inline-block; /* Ensure links are displayed in a block */
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Media Query for tablets */
+@media only screen and (min-width: 768px) {
+  .bg-color {
+    padding: 10px 30px;
+  }
+
+  .nav-link {
+    padding: 10px 25px;
+    font-size: 18px;
+  }
+}
+
+/* Media Query for desktops */
+@media only screen and (min-width: 1024px) {
+  .bg-color {
+    padding: 10px 50px;
+  }
+
+  .nav-link {
+    padding: 10px 35px;
+    font-size: 20px;
+  }
+}

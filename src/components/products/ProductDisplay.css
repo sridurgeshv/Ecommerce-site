@@ -1,0 +1,158 @@
+.ProductDisplay {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  max-width: 90rem;
+  justify-content: center; /* Added to center the products horizontally */
+  min-height: calc(100vh - 150px);
+}
+
+.ProductItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.ProductItem img {
+  max-width: 70%;
+  height: 250px;
+  margin-bottom: 10px; /* Add some spacing below the image */
+}
+
+.ProductItem h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ProductItem h2:hover {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.ProductItem p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ProductItem .productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.ProductItem button {
+  color: #232f3e;
+  background-color: #DEEFF5;
+  border: 1px solid #232f3e; 
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.ProductItem button:hover {
+  color: #fff;
+  background-color: #232f3e;
+}
+
+/* Position price and button */
+.ProductItem .price {
+  align-self: flex-start; /* Position at top left */
+  margin-left: 45px; /* Add some margin */
+}
+
+.ProductItem .addToCart {
+  align-self: flex-end; /* Position at bottom right */
+  margin-right: 45px; /* Add some margin */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .ProductDisplay {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width */
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .ProductItem {
+    max-width: calc(50% - 20px);
+  }
+}
+
+.Electronics,
+.Jewelery,
+.Men,
+.Women {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  max-width: 90rem;
+  justify-content: center;
+}
+
+.Jewelery,
+.Men {
+  min-height: calc(100vh - 100px); /* Set minimum height to fill viewport - header and footer height */
+}
+
+.Men .ProductItem .price{
+  align-self: flex-start; /* Position at top left */
+  margin-left: 45px; /* Add some margin */
+}
+
+.Men .ProductItem button {
+  color: #232f3e;
+  background-color: #DEEFF5;
+  border: 1px solid #232f3e; 
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.Men .ProductItem button:hover {
+  color: #fff;
+  background-color: #232f3e;
+}
+
+.Jewelery,
+.Men .ProductItem{
+max-height: 350px;
+}
+
+.Jewelery .ProductItem{
+max-height: 350px;
+}
+
+@media (max-width: 480px) { /* Mobile view */
+  .ProductDisplay {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust column width */
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .ProductItem {
+    max-width: calc(100% - 10px);
+  }
+
+  .ProductItem img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .ProductItem h2 {
+    font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+
+  .ProductItem button {
+    width: 90%; /* Adjust button width */
+  }
+}
