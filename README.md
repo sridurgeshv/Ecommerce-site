@@ -10,6 +10,8 @@ Develop an e-commerce platform that uses cloud NoSQL databases, serverless funct
 
 This repository contains the source code for an e-commerce website built using React. The website includes features such as displaying products from various categories, adding products to a shopping cart, and a checkout process.
 
+You can check the blog here - [Part 1](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
+
 ## Features
 
 - Display products from different categories such as men's clothing, jewelry, electronics, etc.
