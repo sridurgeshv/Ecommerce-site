@@ -50,8 +50,12 @@ To run this project locally, follow these steps:
 - View and modify the items in the shopping cart.
 - Proceed to checkout and complete the purchase.
 
-## Screenshots
 
+## Architecture 
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
+
+## Screenshots
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main%20page.png)
 
 ## Contributing
 Contributions are welcome! Feel free to open issues and pull requests.
@@ -97,10 +101,6 @@ ANS: – Yes, we can redirect the user to the login page once the user is logged
 [link part 3](https://www.cloudthat.com/resources/blog/verify-the-user-and-login-using-aws-cognito-with-react-js-part-3) 
 
 [link-part 4](https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js-session-and-logout-part-4)
-
-## Architecture 
-![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
-
 
 ## License
 This project is licensed under the MIT License.   
