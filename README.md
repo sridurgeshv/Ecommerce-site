@@ -19,6 +19,9 @@ You can check the blog here - [Part 1](https://sridurgeshv.hashnode.dev/how-to-b
 - View and modify the items in the cart.
 - Proceed to checkout to complete the purchase.
 
+## Architecture 
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
+
 ## Installation
 
 To run this project locally, follow these steps:
@@ -50,9 +53,6 @@ To run this project locally, follow these steps:
 - View and modify the items in the shopping cart.
 - Proceed to checkout and complete the purchase.
 
-
-## Architecture 
-![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
 
 ## Screenshots
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main%20page.png)
