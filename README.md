@@ -56,7 +56,7 @@ To run this project locally, follow these steps:
 
 
 ## Screenshots
-![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main%20page.png)
+![Alt Text]()
 
 ## Contributing
 Contributions are welcome! Feel free to open issues and pull requests.
