@@ -1,0 +1,28 @@
+{
+    "common": {
+        "Hello": "Привет",
+        "SunnyMart": "СанниМарт",
+        "Login": "Войти",  
+        "Signup": "Регистрация",
+        "Logout": "Выйти",  
+        "Today's Deals": "Предложения дня",  
+        "Men": "Мужчины", 
+        "Women": "Женщины",  
+        "Electronics": "Электроника", 
+        "Jewelery": "Ювелирные изделия",  
+        "Gift Ideas": "Подарочные идеи",   
+        "Order History": "История заказов",  
+        "Customer Service": "Служба поддержки",  
+        "Your Account": "Ваш аккаунт", 
+        "Your Orders": "Ваши заказы",  
+        "Login & security": "Вход и безопасность",  
+        "Your Addresses": "Ваши адреса",   
+        "Data and Privacy": "Данные и конфиденциальность",
+        "Recommended deals for you": "Рекомендуемые предложения для вас",  
+        "All Deals": "Все предложения",   
+        "Find the perfect gift": "Найдите идеальный подарок",  
+        "Contact Us": "Свяжитесь с нами",
+        "FAQs": "Частые вопросы",
+        "Support": "Поддержка"
+    }
+}

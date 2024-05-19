@@ -1,0 +1,39 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px; /* Increase the padding value */
+  font-family: Arial, sans-serif;
+}
+  
+  .brcode {
+    padding-top: 10px;
+  }
+  
+  .bbc {
+    padding-top: 10px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px; /* Add padding around the table */
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
