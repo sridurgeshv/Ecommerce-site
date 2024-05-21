@@ -8,7 +8,7 @@ Develop an e-commerce platform that uses cloud NoSQL databases, serverless funct
 
 ## Description
 
-This repository contains the source code for an e-commerce website built using React. The website includes features such as displaying products from various categories, adding products to a shopping cart, and a checkout process.
+This repository holds the source code for an e-commerce site developed with React. It supports functionalities like showcasing items across different categories, enabling users to add these items to a shopping cart, and facilitating a checkout procedure. The subsequent links lead to articles on Hashnode that serve as guides for understanding how AWS cloud services were incorporated into the e-commerce web application.
 
 - Intro to the blog - [Link to Hashnode](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
 - AWS Cognito       - [Link to Hashnode - Part 1](https://sridurgeshv.hashnode.dev/enhancing-security-with-aws-cognito-in-your-react-application-part-1)
