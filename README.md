@@ -8,19 +8,21 @@ Develop an e-commerce platform that uses cloud NoSQL databases, serverless funct
 
 ## Description
 
-This repository holds the source code for an e-commerce site developed with React. It supports functionalities like showcasing items across different categories, enabling users to add these items to a shopping cart, and facilitating a checkout procedure. The subsequent links lead to articles on Hashnode that serve as guides for understanding how AWS cloud services were incorporated into the e-commerce web application.
+This repository showcases a robust, cloud-native e-commerce platform developed with React, leveraging the power of AWS cloud services. The platform supports a wide range of functionalities, including product listing across various categories, shopping cart management, and a streamlined checkout process.
 
-- Intro to the blog - [Link to Hashnode](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
-- AWS Cognito       - [Link to Hashnode - Part 1](https://sridurgeshv.hashnode.dev/enhancing-security-with-aws-cognito-in-your-react-application-part-1)
-- AWS Cognito       - [Link to Hashnode - Part 2](https://sridurgeshv.hashnode.dev/user-authentication-with-aws-cognito-part-2)
-- S3                - [Link to Hashnode]()
+To provide a comprehensive understanding of the integration process, we have curated a series of insightful articles hosted on Hashnode:
+
+- [Intro to the blog](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
+- [AWS Cognito - Part 1](https://sridurgeshv.hashnode.dev/enhancing-security-with-aws-cognito-in-your-react-application-part-1)
+- [AWS Cognito - Part 2](https://sridurgeshv.hashnode.dev/user-authentication-with-aws-cognito-part-2)
+- [Leveraging Amazon S3 for Order Data Management](https://hashnode.com/edit/clwhldln4000209kybvmwghk5)
 
 ## Features
 
-- Display products from different categories such as men's clothing, jewelry, electronics, etc.
-- Add products to the shopping cart.
-- View and modify the items in the cart.
-- Proceed to checkout to complete the purchase.
+- Display products from diverse categories (e.g., men's clothing, jewelry, electronics)
+- Add products to the shopping cart
+- View and modify cart items
+- Proceed to checkout for secure online purchases
 
 ## Architecture 
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
@@ -56,12 +58,11 @@ To run this project locally, follow these steps:
 - View and modify the items in the shopping cart.
 - Proceed to checkout and complete the purchase.
 
+Contributing
+Contributions are welcome! Please open issues and pull requests for any improvements or bug fixes.
 
 ## Screenshots
 ![Alt Text]()
-
-## Contributing
-Contributions are welcome! Feel free to open issues and pull requests.
 
 
 ## FAQ
@@ -97,13 +98,6 @@ ANS: – Yes, we can display the user information on the page. Once the user is 
 
 ANS: – Yes, we can redirect the user to the login page once the user is logged out from the application. We can use navigate or normal javascript method (window.location.href) 
 
-[link part-1](https://www.cloudthat.com/resources/blog/aws-cognito-service-with-react-js-application-setup)
-
-[link part 2](https://www.cloudthat.com/resources/blog/detailed-guide-to-register-a-user-in-aws-cognito-with-reactjs-part-2)
-
-[link part 3](https://www.cloudthat.com/resources/blog/verify-the-user-and-login-using-aws-cognito-with-react-js-part-3) 
-
-[link-part 4](https://www.cloudthat.com/resources/blog/aws-cognito-with-react-js-session-and-logout-part-4)
 
 ## License
 This project is licensed under the MIT License.   
