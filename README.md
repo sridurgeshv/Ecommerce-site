@@ -58,7 +58,7 @@ To run this project locally, follow these steps:
 - View and modify the items in the shopping cart.
 - Proceed to checkout and complete the purchase.
 
-Contributing
+## Contributing
 Contributions are welcome! Please open issues and pull requests for any improvements or bug fixes.
 
 ## Screenshots
@@ -85,19 +85,6 @@ ANS: – Yes, we can use the email addresses in the username field instead of gi
 **5. Can we verify the user using an email link instead of OTP?**
 
 ANS: – Yes, we can verify the user using an email link instead of OTP. For this, we need to configure the Cognito user pool. General Settings => Message Customization => Verification Type Change verification type Code to Link.
-
-**6. Can we display user information on the page?**
-
-ANS: – Yes, we can display the user information on the page. Once the user is logged in, we will get the user information as a JSON object from the AWS Cognito User Pool. by parsing the JSON object, we can display the user information on the page.
-
-**7. Can we display the logged-in user’s username or email?**
-
-ANS: – Yes, we can display the user information on the page. Once the user is logged in, we will get the user information as a JSON object from the AWS Cognito User Pool. by parsing the JSON object, we can display the user information on the page.
-
-**8. Can we redirect the user to login page after logout?**
-
-ANS: – Yes, we can redirect the user to the login page once the user is logged out from the application. We can use navigate or normal javascript method (window.location.href) 
-
 
 ## License
 This project is licensed under the MIT License.   
