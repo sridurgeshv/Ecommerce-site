@@ -1,8 +1,4 @@
-## Cloud-Based E-Commerce Platform
-
-Develop an e-commerce platform that uses cloud NoSQL databases, serverless functions etc to provide an ecommerce platform for people to list, sell and buy products.
-
-# Strategically Architectured E-Commerce Platform: A Multi-tiered Application Approach
+# Empowering E-Commerce: A Cloud-Native Platform for Seamless Online Shopping Experience
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
