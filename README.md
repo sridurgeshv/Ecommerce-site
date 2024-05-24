@@ -21,7 +21,7 @@ To provide a comprehensive understanding of the integration process, we have cur
 - Proceed to checkout for secure online purchases
 
 ## Architecture 
-![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Ecommerce-site.png)
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/final-architecture.png)
 
 ## Installation
 
