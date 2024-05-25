@@ -22,9 +22,9 @@ const OrderHistory = () => {
 
     // Initialize AWS SDK with your credentials
     AWS.config.update({
-      accessKeyId: 'AKIA2KFSGM3U6BXOBSU2',
-      secretAccessKey: 'WKcps235lqKKMtJ5OLSypE4kDsvwJkmvGOqVBRrR',
-      region: 'us-east-1',
+      accessKeyId: 'Your-Access-Key-ID',
+      secretAccessKey: 'Your-Access-Key',
+      region: 'Your-region',
     });
 
     const s3 = new AWS.S3();
