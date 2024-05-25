@@ -11,9 +11,9 @@ import sendInvoiceEmail from './sendInvoiceEmail';
 
 // Initialize AWS SDK with your credentials
 AWS.config.update({
-  accessKeyId: 'AKIA2KFSGM3U6BXOBSU2',
-  secretAccessKey: 'WKcps235lqKKMtJ5OLSypE4kDsvwJkmvGOqVBRrR',
-  region: 'us-east-1',
+  accessKeyId: 'Your-Access-ID',
+  secretAccessKey: 'Your-Client-ID',
+  region: 'Your-region',
   endpoint: 'https://s3.amazonaws.com',
 });
 
