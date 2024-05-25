@@ -83,8 +83,8 @@ ANS: – Yes, you can use email addresses as usernames by passing the email addr
 
 ANS: – Yes, users can be verified using an email link. This can be configured in the Cognito User Pool under General Settings -> Message Customization -> Verification Type, changing the verification type from code to link.
 
+## Testing : 
+[Click here to test the platform](https://ecommerce-store-61124.web.app/)
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Testing : 
-Here - [Link](https://ecommerce-store-61124.web.app/)
