@@ -1,4 +1,4 @@
-# Empowering E-Commerce: A Cloud-Native Platform for Seamless Online Shopping Experience
+# Empowering E-Commerce: A Cloud-Native Platform for a Seamless Online Shopping Experience
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -19,8 +19,8 @@ To provide a comprehensive understanding of the integration process, we have cur
 - Display products from diverse categories (e.g., men's clothing, jewelry, electronics)
 - Add products to the shopping cart
 - View and modify cart items
-- Proceed to checkout for secure online purchases
-
+- Secure online checkout process
+  
 ## Architecture 
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/final-architecture.png)
 
@@ -65,23 +65,23 @@ Contributions are welcome! Please open issues and pull requests for any improvem
 ## FAQ
 **1. Why React.JS?**
 
-ANS: – React JS allows you to create a web application that can change the data without reloading the whole web page. React JS uses JSX that allows HTML quoting and uses that HTML tag syntax to render subcomponents.
+ANS: – React allows you to create a web application that can update and render efficiently without reloading the entire page. React's use of JSX enables the combination of HTML with JavaScript, making it easier to build complex interfaces.
 
 **2. Why AWS Cognito service?**
 
-ANS: – AWS Cognito service lets you quickly add user sign-up and authentication to your web and mobile application. AWS Cognito also enables you to authenticate users through external identity providers like Google, Microsoft, Facebook, etc. It also provides temporary security credentials to access your app’s backend resources using Amazon API Gateway.
+ANS: – AWS Cognito provides a scalable and secure way to manage user authentication, including sign-up and sign-in functionality. It supports social identity providers like Google and Facebook, and offers secure access to AWS resources.
 
 **3. How can we add additional attributes along with a Username and password?**
 
-ANS: – We can add additional attributes with their value in attributeList while calling the signup method of the AWS Cognito User Pool.
+ANS: – Additional attributes can be added to the attributeList while calling the signup method of the AWS Cognito User Pool.
 
 **4. Can we pass the email address in the username field?**
 
-ANS: – Yes, we can use the email addresses in the username field instead of giving a separate username. We can archive this goal via passing the email address as username attributes in the signup method of the AWS Cognito User Pool.
+ANS: – Yes, you can use email addresses as usernames by passing the email address in the username attribute during the signup process.
 
 **5. Can we verify the user using an email link instead of OTP?**
 
-ANS: – Yes, we can verify the user using an email link instead of OTP. For this, we need to configure the Cognito user pool. General Settings => Message Customization => Verification Type Change verification type Code to Link.
+ANS: – Yes, users can be verified using an email link. This can be configured in the Cognito User Pool under General Settings -> Message Customization -> Verification Type, changing the verification type from code to link.
 
 ## License
-This project is licensed under the MIT License.   
+This project is licensed under the MIT License. See the LICENSE file for details.
