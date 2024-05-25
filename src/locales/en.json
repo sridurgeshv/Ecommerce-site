@@ -1,0 +1,29 @@
+{
+    "common": {
+        "Hello": "Hello",
+        "CloudCart": "CloudCart",
+        "Login": "Login",
+        "Signup": "Signup",
+        "Logout": "Logout",
+        "Today's Deals": "Today's Deals",
+        "Men": "Men",  
+        "Women": "Women",
+        "Electronics": "Electronics",
+        "Jewelery": "Jewelery",
+        "Gift Ideas": "Gift Ideas",
+        "Order History": "Order History",  
+        "Customer Service": "Customer Service",
+        "Your Account": "Your Account",
+        "Your Orders": "Your Orders", 
+        "Login & security": "Login & security",
+        "Your Addresses": "Your Addresses",
+        "Data and Privacy": "Data and Privacy",  
+        "Recommended deals for you": "Recommended deals for you",
+        "All Deals": "All Deals",  
+        "Find the perfect gift": "Find the perfect gift",
+        "Contact Us": "Contact Us",
+        "FAQs": "FAQs",
+        "Support": "Support"
+    }
+}
+  
