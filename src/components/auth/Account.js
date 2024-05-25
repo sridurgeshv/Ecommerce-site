@@ -1,15 +1,18 @@
 import { AuthenticationDetails, CognitoUser } from 'amazon-cognito-identity-js';
-import { createContext, useState, useEffect } from 'react'; // Use useEffect for async operations
+import { createContext, useState, useEffect } from 'react';
 import UserPool from '../../UserPool'; // Assuming UserPool is configured correctly
 
+// Create the AccountContext
 const AccountContext = createContext();
 
 const Account = (props) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  // Function to get the current user session
   const getSession = async () => {
     await new Promise((resolve, reject) => {
       const user = UserPool.getCurrentUser();
+
       if (user) {
         user.getSession((err, session) => {
           if (err) {
@@ -24,16 +27,17 @@ const Account = (props) => {
     });
   };
 
-  const authenticate = async (Username, Password) => {
+  // Function to authenticate the user
+  const authenticate = async (username, password) => {
     await new Promise((resolve, reject) => {
       const user = new CognitoUser({
-        Username,
+        Username: username,
         Pool: UserPool,
       });
 
       const authDetails = new AuthenticationDetails({
-        Username,
-        Password,
+        Username: username,
+        Password: password,
       });
 
       user.authenticateUser(authDetails, {
@@ -48,6 +52,7 @@ const Account = (props) => {
     });
   };
 
+  // Function to log out the user
   const logout = () => {
     const user = UserPool.getCurrentUser();
     user.signOut();
@@ -64,6 +69,7 @@ const Account = (props) => {
         console.error('Error checking authentication:', error);
       }
     };
+
     checkAuth();
   }, []);
 
