@@ -59,7 +59,7 @@ To run this project locally, follow these steps:
 Contributions are welcome! Please open issues and pull requests for any improvements or bug fixes.
 
 ## Screenshots
-![Main page](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main-page.png)
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main-page.png)
 
 
 ## FAQ
