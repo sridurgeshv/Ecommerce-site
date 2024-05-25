@@ -10,8 +10,10 @@ function Register() {
   const [verifyProcess, setVerifyProcess] = useState(false);
   const [OTP, setOTP] = useState('');
 
+  // Handle form submission for registration
   const onSubmit = (e) => {
     e.preventDefault();
+
     const attributeList = [];
     attributeList.push(
       new CognitoUserAttribute({
@@ -19,6 +21,7 @@ function Register() {
         Value: email,
       })
     );
+
     UserPool.signUp(username, password, attributeList, null, (err, data) => {
       if (err) {
         console.log(err);
@@ -31,13 +34,17 @@ function Register() {
     });
   };
 
+  // Handle form submission for account verification
   const verifyAccount = (e) => {
     e.preventDefault();
+
     const user = new CognitoUser({
       Username: username,
       Pool: UserPool,
     });
+
     console.log(user);
+
     user.confirmRegistration(OTP, true, (err, data) => {
       if (err) {
         console.log(err);
@@ -54,6 +61,7 @@ function Register() {
     <div className="register">
       <h2>Create your account</h2>
       <h3>Begin shopping, join us today!</h3>
+
       {verifyProcess === false ? (
         <form onSubmit={onSubmit}>
           UserName
@@ -77,7 +85,9 @@ function Register() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <button className="reg" type="submit">Register</button>
+          <button className="reg" type="submit">
+            Register
+          </button>
         </form>
       ) : (
         <form onSubmit={verifyAccount}>
