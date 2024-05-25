@@ -4,9 +4,9 @@ import Invoice from '../services/Invoice';
 
 // Configure AWS with your credentials and region
 AWS.config.update({
-      accessKeyId: 'AKIA2KFSGM3U6BXOBSU2',
-      secretAccessKey: 'WKcps235lqKKMtJ5OLSypE4kDsvwJkmvGOqVBRrR',
-      region: 'us-east-1',
+      accessKeyId: 'Your-Access-Key',
+      secretAccessKey: 'Your-Secret-Access-Key',
+      region: 'Your-region',
     });
 
 const ses = new AWS.SES();
