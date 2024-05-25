@@ -85,3 +85,6 @@ ANS: – Yes, users can be verified using an email link. This can be configured 
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Testing : 
+Here - [Link](https://ecommerce-store-61124.web.app/)
