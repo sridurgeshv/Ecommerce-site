@@ -69,7 +69,7 @@ Contributions are welcome! Please open issues and pull requests for any improvem
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Invoice.JPG)
 
 ## Testing : 
-[Click here to test the platform](https://ecommerce-store-61124.web.app/)
+[Click here to test the platform](https://shopping-store-24137.web.app/)
 
 ## FAQ
 **1. Why React.JS?**
