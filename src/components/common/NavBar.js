@@ -24,16 +24,16 @@ const NavBar = () => {
               </Link>
               <Link className="nav-link" to="/electronics">
               {t('common.Electronics')} 
-              </Link>
-              <Link className="nav-link" to="/jewelery">
-              {t('common.Jewelery')}  
               </Link> 
               <Link className="nav-link" to="/men">
               {t('common.Men')}
               </Link>
               <Link className="nav-link" to="/women">
               {t('common.Women')}
-              </Link>              
+              </Link>   
+              <Link className="nav-link" to="/jewelery">
+              {t('common.Jewellery')}  
+              </Link>           
               <Link className="nav-link" to="/giftIdeas">
               {t('common.Gift Ideas')}
               </Link>
