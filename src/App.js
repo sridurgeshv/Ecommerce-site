@@ -55,6 +55,16 @@ function App() {
     setShowModal(true);
   };
 
+  const updateCartItemQuantity = (id, quantity) => {
+    setCartItems((prevItems) => {
+      const updatedItems = prevItems
+        .map((item) => (item.id === id ? { ...item, quantity } : item))
+        .filter((item) => item.quantity > 0);
+      sessionStorage.setItem('cart', JSON.stringify(updatedItems));
+      return updatedItems;
+    });
+  };
+
   const clearCart = () => {
     setCartItems([]);
   };
@@ -79,7 +89,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+            <Route path="/cart" element={<Cart cartItems={cartItems} updateCartItemQuantity={updateCartItemQuantity} />} />
             <Route path="/checkout" element={<Checkout cartItems={cartItems} clearCart={clearCart} />} />
             <Route path="/account" element={<AccountPage />} />
             <Route path="/deals" element={<TodayDeals addToCart={addToCart} />} />
@@ -104,6 +114,7 @@ function App() {
               }
             />
           </Routes>
+          {showModal && <Modal closeModal={closeModal} />}
           <Footer />
         </div>
       </Router>
