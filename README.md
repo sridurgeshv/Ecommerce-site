@@ -60,12 +60,15 @@ Contributions are welcome! Please open issues and pull requests for any improvem
 
 ## Screenshots
 - Main Page
+
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/main-page.png)
 
 - Register Page
+
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/register.png)
 
 - Invoice Page
+
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/invoice.png)
 
 ## Testing : 
