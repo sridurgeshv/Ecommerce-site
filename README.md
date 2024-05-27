@@ -16,7 +16,7 @@ To provide a comprehensive understanding of the integration process, we have cur
 
 ## Features
 
-- Display products from diverse categories (e.g., men's clothing, jewelry, electronics)
+- Display products from diverse categories (e.g., men's clothing, jewellery, electronics)
 - Add products to the shopping cart
 - View and modify cart items
 - Secure online checkout process
