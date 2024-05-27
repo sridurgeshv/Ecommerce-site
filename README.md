@@ -65,6 +65,9 @@ Contributions are welcome! Please open issues and pull requests for any improvem
 - Register Page
 ![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/register.png)
 
+- Invoice Page
+![Alt Text](https://github.com/sridurgeshv/Ecommerce-site/blob/main/images/Invoice.JPG)
+
 ## Testing : 
 [Click here to test the platform](https://ecommerce-store-61124.web.app/)
 
