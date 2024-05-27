@@ -72,6 +72,7 @@ Contributions are welcome! Please open issues and pull requests for any improvem
 [Click here to test the platform](https://shopping-store-24137.web.app/)
 
 ## FAQ
+
 **1. Why React.JS?**
 
 ANS: – React allows you to create a web application that can update and render efficiently without reloading the entire page. React's use of JSX enables the combination of HTML with JavaScript, making it easier to build complex interfaces.
