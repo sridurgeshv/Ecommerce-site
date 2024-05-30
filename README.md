@@ -89,13 +89,13 @@ ANS: – AWS Cognito provides a scalable and secure way to manage user authentic
 
 ANS: – Additional attributes can be added to the attributeList while calling the signup method of the AWS Cognito User Pool.
 
-**4. Can we pass the email address in the username field?**
-
-ANS: – Yes, you can use email addresses as usernames by passing the email address in the username attribute during the signup process.
-
-**5. Can we verify the user using an email link instead of OTP?**
+**4. Can we verify the user using an email link instead of OTP?**
 
 ANS: – Yes, users can be verified using an email link. This can be configured in the Cognito User Pool under General Settings -> Message Customization -> Verification Type, changing the verification type from code to link.
+
+**5. Can I access Cloud Cart on my mobile device??**
+
+ANS: – Well, we highly advise using our platform from a desktop computer for a better shopping experience.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
