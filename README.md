@@ -59,6 +59,9 @@ To run this project locally, follow these steps:
 
 5. Open your browser and navigate to http://localhost:3000 to view the website.
 
+> [!NOTE]
+> The code files lack several essential components that need to be incorporated following the methodology outlined in the blog post.
+
 ## Usage
 - **Browse Products**: Navigate through different categories of products.
 - **Product Details**: Click on a product to view details and add it to the shopping cart.
