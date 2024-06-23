@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Executive Summary
+## Summary
 
 This repository showcases a robust, cloud-native e-commerce platform developed with React and leveraging the power of AWS cloud services. Designed to enhance the online shopping experience, this platform supports a wide range of functionalities, including product listing across various categories, shopping cart management, and a streamlined checkout process. This project aims to deliver a scalable, secure, and user-friendly solution for modern e-commerce needs.
 
