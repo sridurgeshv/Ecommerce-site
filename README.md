@@ -8,7 +8,7 @@ This repository showcases a robust, cloud-native e-commerce platform developed w
 
 To provide a comprehensive understanding of the integration process, we have curated a series of insightful articles hosted on Hashnode:
 
-- [Intro to the blog](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
+- [Intro to the Project](https://sridurgeshv.hashnode.dev/how-to-build-a-strategic-e-commerce-platform-a-complete-guide)
 - [AWS Cognito - Part 1](https://sridurgeshv.hashnode.dev/enhancing-security-with-aws-cognito-in-your-react-application-part-1)
 - [AWS Cognito - Part 2](https://sridurgeshv.hashnode.dev/user-authentication-with-aws-cognito-part-2)
 - [Leveraging Amazon S3 for Order Data Management](https://sridurgeshv.hashnode.dev/data-handling-via-amazon-s3)
